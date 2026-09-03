@@ -15,7 +15,8 @@
     },
     {
       "name": "tolerance",
-      "ioValue": 10
+      "ioValue": 0.01,
+      "currentEquation": "0.01"
     },
     {
       "name": "thickness",
@@ -644,8 +645,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.6549479166666667,
-      "y": 0.7799999999999999,
+      "x": 0.583984375,
+      "y": 0.8628571428571429,
       "uniqueID": "id-1231",
       "name": "Offset_2D",
       "ioValues": [
@@ -655,7 +656,7 @@
         },
         {
           "name": "Offset",
-          "ioValue": 10,
+          "ioValue": 0.01,
           "currentEquation": "tolerance"
         }
       ],
@@ -700,7 +701,7 @@
             },
             {
               "name": "distance",
-              "ioValue": 10
+              "ioValue": 0.01
             }
           ],
           "interpreterVersion": 1,
@@ -752,14 +753,54 @@
       "unitsKey": "MM",
       "fileTypeVersion": 1,
       "lastReloadedFromGithubAt": 1788457879847
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.69921875,
+      "y": 0.7485714285714287,
+      "uniqueID": "id-1243",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Color",
+      "x": 0.7656250000000001,
+      "y": 0.8371428571428572,
+      "uniqueID": "id-1247",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "selectedColor": "Keep Out"
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.8639322916666666,
+      "y": 0.6714285714285715,
+      "uniqueID": "id-1250",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
     }
   ],
   "allConnectors": [
-    {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-1095",
-      "ap2ID": "id-1084"
-    },
     {
       "ap2Name": "Shape 2",
       "ap1ID": "id-1095",
@@ -814,6 +855,36 @@
       "ap2Name": "2D_Shape",
       "ap1ID": "id-1221",
       "ap2ID": "id-1231"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-1221",
+      "ap2ID": "id-1243"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1221",
+      "ap2ID": "id-1250"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-1231",
+      "ap2ID": "id-1243"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1243",
+      "ap2ID": "id-1247"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1247",
+      "ap2ID": "id-1250"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-1250",
+      "ap2ID": "id-1084"
     }
   ],
   "unitsKey": "Inches",
