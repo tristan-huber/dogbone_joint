@@ -16,6 +16,11 @@
     {
       "name": "tolerance",
       "ioValue": 10
+    },
+    {
+      "name": "thickness",
+      "ioValue": 0.5,
+      "currentEquation": "0.5"
     }
   ],
   "topLevel": true,
@@ -42,7 +47,7 @@
     {
       "atomType": "Input",
       "x": 0.0231,
-      "y": 0.4228571428571429,
+      "y": 0.34285714285714286,
       "uniqueID": "id-1089",
       "name": "width",
       "type": "number"
@@ -50,7 +55,7 @@
     {
       "atomType": "Input",
       "x": 0.0231,
-      "y": 0.6,
+      "y": 0.7514285714285714,
       "uniqueID": "id-1092",
       "name": "tolerance",
       "type": "number"
@@ -68,8 +73,8 @@
         },
         {
           "name": "y length",
-          "ioValue": 3.5,
-          "currentEquation": "length - width"
+          "ioValue": 5,
+          "currentEquation": "length"
         }
       ]
     },
@@ -81,14 +86,15 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 0
+          "ioValue": 0.75,
+          "currentEquation": "width / 2"
         }
       ]
     },
     {
       "atomType": "Move",
-      "x": 0.23502604166666666,
-      "y": 0.5885714285714286,
+      "x": 0.21875,
+      "y": 0.64,
       "uniqueID": "id-1102",
       "ioValues": [
         {
@@ -97,11 +103,13 @@
         },
         {
           "name": "xDist",
-          "ioValue": 0
+          "ioValue": 0.375,
+          "currentEquation": "width / 4"
         },
         {
           "name": "yDist",
-          "ioValue": 0
+          "ioValue": -2.125,
+          "currentEquation": "-(length - width / 2) / 2"
         },
         {
           "name": "zDist",
@@ -154,8 +162,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.36588541666666663,
-      "y": 0.6685714285714286,
+      "x": 0.4889322916666667,
+      "y": 0.38571428571428573,
       "uniqueID": "id-1122",
       "name": "util.Mirror",
       "topLevel": false,
@@ -238,16 +246,177 @@
       "lastReloadedFromGithubAt": 1788457531988
     },
     {
+      "atomType": "Input",
+      "x": 0.0231,
+      "y": 0.48,
+      "uniqueID": "id-1141",
+      "name": "thickness"
+    },
+    {
+      "atomType": "Move",
+      "x": 0.22526041666666669,
+      "y": 0.8142857142857143,
+      "uniqueID": "id-1195",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": -0.375,
+          "currentEquation": "-width / 4"
+        },
+        {
+          "name": "yDist",
+          "ioValue": -2.125,
+          "currentEquation": "-(length - width / 2) / 2"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.3723958333333333,
+      "y": 0.7714285714285715,
+      "uniqueID": "id-1211",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        }
+      ]
+    },
+    {
       "atomType": "Fusion",
-      "x": 0.55859375,
-      "y": 0.4342857142857143,
-      "uniqueID": "id-1131",
+      "x": 0.4466145833333333,
+      "y": 0.7428571428571428,
+      "uniqueID": "id-1217",
       "ioValues": [
         {
           "name": "Shape 1",
           "ioValue": {
-            "geometry": "rectangle-0.75-3.5",
-            "dimension": "2D",
+            "geometry": [
+              {
+                "geometry": "cut-cut-move-circle-0.375-0.375--2.125-0-rectangle-0.75-5-move-circle-0.375--0.375--2.125-0",
+                "dimension": "2D",
+                "tags": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "bom": [],
+                "boundingBox": {
+                  "min": [
+                    -0.000001,
+                    -2.500001,
+                    0
+                  ],
+                  "max": [
+                    0.750001,
+                    -1.749999,
+                    0
+                  ]
+                }
+              },
+              {
+                "geometry": "cut-rectangle-0.75-5-move-circle-0.375--0.375--2.125-0",
+                "dimension": "2D",
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "tags": [],
+                "bom": [],
+                "boundingBox": {
+                  "min": [
+                    -0.375001,
+                    -2.500001,
+                    0
+                  ],
+                  "max": [
+                    0.375001,
+                    2.500001,
+                    0
+                  ]
+                }
+              },
+              {
+                "geometry": "move-circle-0.375--0.375--2.125-0",
+                "dimension": "2D",
+                "tags": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "bom": [],
+                "boundingBox": {
+                  "min": [
+                    -0.750001,
+                    -2.500001,
+                    0
+                  ],
+                  "max": [
+                    0.000001,
+                    -1.749999,
+                    0
+                  ]
+                }
+              }
+            ],
             "plane": {
               "origin": [
                 0,
@@ -267,14 +436,188 @@
             },
             "color": "#aad7f2",
             "tags": [],
-            "bom": []
+            "bom": [],
+            "dimension": "2D",
+            "nonReplicadSerialized": [],
+            "boundingBox": {
+              "min": [
+                -0.750001,
+                -2.500001,
+                0
+              ],
+              "max": [
+                0.750001,
+                2.500001,
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "unionType": "Fusion"
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.5891927083333334,
+      "y": 0.5371428571428571,
+      "uniqueID": "id-1221",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": [
+              {
+                "geometry": "cut-cut-move-circle-0.375-0.375--2.125-0-rectangle-0.75-5-move-circle-0.375--0.375--2.125-0",
+                "dimension": "2D",
+                "tags": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "bom": [],
+                "boundingBox": {
+                  "min": [
+                    -0.000001,
+                    -2.500001,
+                    0
+                  ],
+                  "max": [
+                    0.750001,
+                    -1.749999,
+                    0
+                  ]
+                }
+              },
+              {
+                "geometry": "cut-rectangle-0.75-5-move-circle-0.375--0.375--2.125-0",
+                "dimension": "2D",
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "tags": [],
+                "bom": [],
+                "boundingBox": {
+                  "min": [
+                    -0.375001,
+                    -2.500001,
+                    0
+                  ],
+                  "max": [
+                    0.375001,
+                    2.500001,
+                    0
+                  ]
+                }
+              },
+              {
+                "geometry": "move-circle-0.375--0.375--2.125-0",
+                "dimension": "2D",
+                "tags": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "bom": [],
+                "boundingBox": {
+                  "min": [
+                    -0.750001,
+                    -2.500001,
+                    0
+                  ],
+                  "max": [
+                    0.000001,
+                    -1.749999,
+                    0
+                  ]
+                }
+              }
+            ],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": [],
+            "dimension": "2D",
+            "nonReplicadSerialized": [],
+            "boundingBox": {
+              "min": [
+                -0.750001,
+                -2.500001,
+                0
+              ],
+              "max": [
+                0.750001,
+                2.500001,
+                0
+              ]
+            }
           }
         },
         {
           "name": "Shape 2",
           "ioValue": {
-            "geometry": "move-rectangle-1.5-0.75-0--2.125-0",
-            "dimension": "2D",
+            "geometry": "9f343ed8-0",
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": [],
             "plane": {
               "origin": [
                 0,
@@ -292,20 +635,135 @@
                 1
               ]
             },
-            "color": "#aad7f2",
-            "tags": [],
-            "bom": []
+            "metadata": {},
+            "dimension": "2D"
           }
         }
       ],
       "unionType": "Fusion"
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.6549479166666667,
+      "y": 0.7799999999999999,
+      "uniqueID": "id-1231",
+      "name": "Offset_2D",
+      "ioValues": [
+        {
+          "name": "2D_Shape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Offset",
+          "ioValue": 10,
+          "currentEquation": "tolerance"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1227",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0231,
+          "y": 0.14,
+          "uniqueID": "id-1228",
+          "name": "2D_Shape",
+          "type": "geometry"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0231,
+          "y": 0.22400000000000003,
+          "uniqueID": "id-1229",
+          "name": "Offset"
+        },
+        {
+          "atomType": "Code",
+          "x": 0.49007936507936506,
+          "y": 0.44011142061281333,
+          "uniqueID": "id-1230",
+          "ioValues": [
+            {
+              "name": "shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "distance",
+              "ioValue": 10
+            }
+          ],
+          "interpreterVersion": 1,
+          "code": "function run(shape: Assembly, distance: number = 1): Assembly {\n  return shape.onLeafs((leaf) => {\n    leaf.geometry = leaf.geometry.offset(distance);\n    return leaf;\n  }) as Assembly;\n}",
+          "compiledCode": "\"use strict\";\nfunction run(shape, distance = 1) {\n    return shape.onLeafs((leaf) => {\n        leaf.geometry = leaf.geometry.offset(distance);\n        return leaf;\n    });\n}\n"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-1228",
+          "ap2ID": "id-1230"
+        },
+        {
+          "ap2Name": "distance",
+          "ap1ID": "id-1229",
+          "ap2ID": "id-1230"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1230",
+          "ap2ID": "id-1227"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2026-09-03T10:23:39.040Z",
+        "privateRepo": false,
+        "repoName": "Offset_2D",
+        "dateCreated": "2026-03-27T21:44:37Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/README.md?sanitize=true",
+        "yyyy": 2026,
+        "topMoleculeID": "id-631",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Offset_2D",
+        "topics": [],
+        "pullRequests": [],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739791",
+        "ranking": 6,
+        "searchField": "offset_2d barboursmith takes an input 2d shape and offsets from it to produce a new 2d shape which is larger or smaller ",
+        "owner": "BarbourSmith",
+        "description": "Takes an input 2D shape and offsets from it to produce a new 2D shape which is larger or smaller",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "MM",
+      "fileTypeVersion": 1,
+      "lastReloadedFromGithubAt": 1788457879847
     }
   ],
   "allConnectors": [
     {
-      "ap2Name": "Shape 1",
+      "ap2Name": "number or geometry",
       "ap1ID": "id-1095",
-      "ap2ID": "id-1131"
+      "ap2ID": "id-1084"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1095",
+      "ap2ID": "id-1211"
     },
     {
       "ap2Name": "geometry",
@@ -314,20 +772,49 @@
     },
     {
       "ap2Name": "geometry",
+      "ap1ID": "id-1099",
+      "ap2ID": "id-1195"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1102",
+      "ap2ID": "id-1211"
+    },
+    {
+      "ap2Name": "geometry",
       "ap1ID": "id-1108",
       "ap2ID": "id-1112"
     },
     {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1122",
+      "ap2ID": "id-1221"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-1195",
+      "ap2ID": "id-1211"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1211",
+      "ap2ID": "id-1217"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1211",
+      "ap2ID": "id-1221"
+    },
+    {
       "ap2Name": "assembly",
-      "ap1ID": "id-1112",
+      "ap1ID": "id-1217",
       "ap2ID": "id-1122"
     },
     {
-      "ap2Name": "Shape 2",
-      "ap1ID": "id-1112",
-      "ap2ID": "id-1131"
-    },
-    null
+      "ap2Name": "2D_Shape",
+      "ap1ID": "id-1221",
+      "ap2ID": "id-1231"
+    }
   ],
   "unitsKey": "Inches",
   "fileTypeVersion": 1,
