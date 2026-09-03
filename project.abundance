@@ -119,49 +119,6 @@
       ]
     },
     {
-      "atomType": "Rectangle",
-      "x": 0.18815104166666669,
-      "y": 0.43999999999999995,
-      "uniqueID": "id-1108",
-      "ioValues": [
-        {
-          "name": "x length",
-          "ioValue": 1.5,
-          "currentEquation": "width"
-        },
-        {
-          "name": "y length",
-          "ioValue": 0.75,
-          "currentEquation": "width / 2"
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.310546875,
-      "y": 0.3685714285714286,
-      "uniqueID": "id-1112",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 0
-        },
-        {
-          "name": "yDist",
-          "ioValue": -2.125,
-          "currentEquation": "-(length - width / 2) / 2"
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
       "atomType": "GitHubMolecule",
       "x": 0.4889322916666667,
       "y": 0.38571428571428573,
@@ -820,11 +777,6 @@
       "ap2Name": "Shape 1",
       "ap1ID": "id-1102",
       "ap2ID": "id-1211"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1108",
-      "ap2ID": "id-1112"
     },
     {
       "ap2Name": "Shape 2",
