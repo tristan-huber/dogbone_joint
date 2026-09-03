@@ -9,6 +9,7 @@
 - **length** (number)
 - **width** (number)
 - **tolerance** (number)
+- **thickness** (number)
 
 
 
