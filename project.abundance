@@ -20,8 +20,7 @@
     },
     {
       "name": "thickness",
-      "ioValue": 0.5,
-      "currentEquation": "0.5"
+      "ioValue": 0.5
     }
   ],
   "topLevel": true,
@@ -41,14 +40,14 @@
     {
       "atomType": "Input",
       "x": 0.0231,
-      "y": 0.2571428571428572,
+      "y": 0.14,
       "uniqueID": "id-1086",
       "name": "length"
     },
     {
       "atomType": "Input",
       "x": 0.0231,
-      "y": 0.34285714285714286,
+      "y": 0.22400000000000003,
       "uniqueID": "id-1089",
       "name": "width",
       "type": "number"
@@ -56,7 +55,7 @@
     {
       "atomType": "Input",
       "x": 0.0231,
-      "y": 0.7514285714285714,
+      "y": 0.30800000000000005,
       "uniqueID": "id-1092",
       "name": "tolerance",
       "type": "number"
@@ -206,7 +205,7 @@
     {
       "atomType": "Input",
       "x": 0.0231,
-      "y": 0.48,
+      "y": 0.39200000000000007,
       "uniqueID": "id-1141",
       "name": "thickness"
     },
@@ -779,11 +778,6 @@
       "ap2ID": "id-1211"
     },
     {
-      "ap2Name": "Shape 2",
-      "ap1ID": "id-1122",
-      "ap2ID": "id-1221"
-    },
-    {
       "ap2Name": "Shape 3",
       "ap1ID": "id-1195",
       "ap2ID": "id-1211"
@@ -819,11 +813,6 @@
       "ap2ID": "id-1250"
     },
     {
-      "ap2Name": "retain",
-      "ap1ID": "id-1231",
-      "ap2ID": "id-1243"
-    },
-    {
       "ap2Name": "geometry",
       "ap1ID": "id-1243",
       "ap2ID": "id-1247"
@@ -837,6 +826,16 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-1250",
       "ap2ID": "id-1084"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1122",
+      "ap2ID": "id-1221"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-1231",
+      "ap2ID": "id-1243"
     }
   ],
   "unitsKey": "Inches",
